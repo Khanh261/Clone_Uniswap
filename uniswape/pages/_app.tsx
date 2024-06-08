@@ -7,7 +7,7 @@ import {
   Box,
   Progress,
 } from "@chakra-ui/react";
-import Fonts from "@/components/assets";
+import Fonts from "@/components/assets/fonts";
 import Head from "next/head";
 import { TITLE } from "@/constans/meta";
 import { ReactElement, ReactNode, useState } from "react";
@@ -25,8 +25,6 @@ type AppPropsWithLayout = AppProps & {
 };
 
 export const App = ({ Component, pageProps, ...props }: AppPropsWithLayout) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const router = useRouter();
   const getLayout = Component.getLayout ?? ((page) => page);
   return (
     <ChakraProvider
@@ -47,12 +45,12 @@ export const App = ({ Component, pageProps, ...props }: AppPropsWithLayout) => {
         />
         <title>{TITLE}</title>
       </Head>
-      <Box height={"5px"} bg={"#fff"} position={"relative"} zIndex={99999999}>
+      {/* <Box height={"5px"} bg={"#fff"} position={"relative"} zIndex={99999999}>
         {isLoading && (
           //color scheme of Uniswap
           <Progress isIndeterminate height={"5px"} colorScheme="green" />
         )}
-      </Box>
+      </Box> */}
       <Layout>{getLayout(<Component {...pageProps} />)}</Layout>
     </ChakraProvider>
   );

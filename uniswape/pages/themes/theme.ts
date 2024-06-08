@@ -1,4 +1,4 @@
-import { extendTheme } from "@chakra-ui/react";
+import { background, extendTheme } from "@chakra-ui/react";
 import { buttonTheme } from "./button";
 import { inputTheme } from "./input";
 
@@ -20,6 +20,7 @@ const styles = {
     body: {
       fontSize: "14px",
       fontWeight: "500",
+      backgroundColor: "#171717",
     },
     p: {
       fontSize: "14px",

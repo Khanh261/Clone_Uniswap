@@ -1,8 +1,5 @@
-import { Inter } from "next/font/google";
-import { Box } from "@chakra-ui/react";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Box, Flex } from "@chakra-ui/react";
 
 export default function Home() {
-  return <Box bg={"#343434"}>Hello World</Box>;
+  return <Flex bg={"#343434"}>Hello World</Flex>;
 }
