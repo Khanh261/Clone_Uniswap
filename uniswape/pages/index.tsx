@@ -1,5 +1,16 @@
-import { Box, Flex } from "@chakra-ui/react";
+import ConnectWithUs from "@/components/layout/ConnectWithUs";
+import GoToDeFi from "@/components/layout/GoToDefi";
+import SwapAnytime from "@/components/layout/SwapAnytime";
+import TrustByMillions from "@/components/layout/TrustByMillions";
+import { ContentWrapper } from "@/styles/layout/Content";
 
 export default function Home() {
-  return <Flex bg={"#343434"}>Hello World</Flex>;
+  return (
+    <ContentWrapper>
+      <SwapAnytime />
+      <GoToDeFi />
+      <TrustByMillions />
+      <ConnectWithUs />
+    </ContentWrapper>
+  );
 }

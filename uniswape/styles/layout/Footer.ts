@@ -31,6 +31,10 @@ const FooterContent = chakra(Flex, {
     },
     justifyContent: "space-between",
     gap: "32px",
+    paddingX: {
+      base: "16px",
+      xl: "0px",
+    },
     boxSizing: "border-box",
     color: COLORS.SECONDARY,
   },
