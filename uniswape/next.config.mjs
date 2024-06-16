@@ -29,6 +29,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     unoptimized: false,
+    domains: ["coin-images.coingecko.com"],
   },
   trailingSlash: true,
 };

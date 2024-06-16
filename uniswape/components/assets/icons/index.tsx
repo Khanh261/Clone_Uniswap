@@ -11,9 +11,15 @@ import UniswapIcon from "./uniswap.svg";
 import USDCIcon from "./usdc.svg";
 import EthIcon from "./eth.svg";
 import ArrowDownIcon from "./arrow-down.svg";
+import UniswapGlobalIcon from "./uniswap-global.svg";
+import SearchIcon from "./search.svg";
+import GooglePlayIcon from "./googleplay.svg";
 export {
+  GooglePlayIcon,
+  UniswapGlobalIcon,
   ArrowDownIcon,
   AppleIcon,
+  SearchIcon,
   HelpCenterIcon,
   EthIcon,
   BlogIcon,

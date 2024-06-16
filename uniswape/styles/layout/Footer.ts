@@ -18,6 +18,7 @@ const FooterWrapper = chakra(Flex, {
       base: "fit-content",
       xl: "194px",
     },
+    background: "#141414",
   },
 });
 

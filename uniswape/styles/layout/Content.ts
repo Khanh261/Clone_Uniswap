@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 const ContentStyle = chakra(Box, {
   baseStyle: {
-    bg: "#131313",
+    bg: "#141414",
     w: "100vw",
     display: "flex",
     padding: 0,
@@ -35,6 +35,7 @@ const TrustByMillionsWrapper = chakra(Flex, {
       xl: "row",
     },
     maxWidth: breakPoints.xl,
+    width: "100%",
     justifyContent: "space-between",
     gap: "16px 24px",
     height: {
@@ -198,6 +199,7 @@ const RightContent = chakra(GridItem, {
     maxHeight: "230px",
     overflow: "hidden",
     display: "flex",
+    gap: "5px",
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "space-between",
