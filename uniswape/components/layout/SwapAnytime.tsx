@@ -23,7 +23,7 @@ import { Box } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { ICoin } from "../utils/interface";
 import { EthIcon } from "../assets/icons";
-import { DropdownIcon } from "@/styles/layout/Header";
+import Link from "next/link";
 
 const SwapAnytime = () => {
   const [coins, setCoins] = useState<ICoin[]>([]);
@@ -124,38 +124,42 @@ const SwapAnytime = () => {
               {coins.map((coin) => {
                 const { top, left, animation } = generateCoinProperties();
                 return (
-                  <CoinWrapper style={{ top, left }}>
-                    <motion.div
-                      key={coin.id}
-                      variants={hoverVariants}
-                      whileHover={{
-                        scale: 1.2,
-                        rotate: 50,
-                      }}
-                      animate={animation}
-                    >
-                      <Image
-                        src={coin.image}
-                        alt={coin.symbol}
-                        width={100}
-                        height={100}
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </motion.div>
-                    <CoinValue>
-                      <p>{coin.symbol}</p>
-                      <p
-                        style={{
-                          color:
-                            coin.price_change_percentage_24h > 0
-                              ? "#40b66b"
-                              : "#f44336",
+                  <>
+                    <CoinWrapper style={{ top, left }}>
+                      <motion.div
+                        key={coin.id}
+                        variants={hoverVariants}
+                        whileHover={{
+                          scale: 1.2,
+                          rotate: 50,
                         }}
+                        animate={animation}
                       >
-                        {coin.price_change_percentage_24h}%
-                      </p>
-                    </CoinValue>
-                  </CoinWrapper>
+                        <Link href={"/"}>
+                          <Image
+                            src={coin.image}
+                            alt={coin.symbol}
+                            width={100}
+                            height={100}
+                            style={{ borderRadius: "50%" }}
+                          />
+                        </Link>
+                      </motion.div>
+                      <CoinValue>
+                        <p>{coin.symbol}</p>
+                        <p
+                          style={{
+                            color:
+                              coin.price_change_percentage_24h > 0
+                                ? "#40b66b"
+                                : "#f44336",
+                          }}
+                        >
+                          {coin.price_change_percentage_24h}%
+                        </p>
+                      </CoinValue>
+                    </CoinWrapper>
+                  </>
                 );
               })}
             </CoinGrid>

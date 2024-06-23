@@ -12,19 +12,19 @@ import {
 const ContentStyle = chakra(Box, {
   baseStyle: {
     bg: "#141414",
-    w: "100vw",
-    display: "flex",
-    padding: 0,
-    margin: 0,
-  },
-});
-
-const ContentWrapper = chakra(Flex, {
-  baseStyle: {
+    w: "100%",
     margin: "auto",
+    display: "flex",
     flexDirection: "column",
     gap: "120px",
+    alignItems: "center",
     justifyContent: "space-between",
+    boxSizing: "border-box",
+    padding: {
+      base: "0 24px",
+      md: "0 48px",
+      xl: 0,
+    },
   },
 });
 
@@ -47,11 +47,6 @@ const TrustByMillionsWrapper = chakra(Flex, {
       xl: "484px",
     },
     margin: "auto",
-    boxSizing: "border-box",
-    padding: {
-      base: "0 48px",
-      xl: 0,
-    },
   },
 });
 
@@ -74,10 +69,6 @@ const ConnectWrapper = chakra(Flex, {
     alignItems: "flex-start",
     flex: "0 1 auto",
     boxSizing: "border-box",
-    padding: {
-      base: "0 48px",
-      xl: 0,
-    },
     maxWidth: breakPoints.xl,
   },
 });
@@ -195,7 +186,10 @@ const RightContent = chakra(GridItem, {
     height: "100%",
     background: "rgb(27, 27, 27)",
     borderRadius: "20px",
-    padding: "32px",
+    padding: {
+      base: "24px",
+      xl: "32px",
+    },
     maxHeight: "230px",
     overflow: "hidden",
     display: "flex",
@@ -215,7 +209,7 @@ const RightTitle = chakra(Text, {
     fontSize: { base: "18px", xl: "24px" },
     fontWeight: 500,
     fontStyles: "normal",
-    lineHeight: "24px",
+    lineHeight: "20px",
     letterSpacing: "-0.01em",
   },
 });
@@ -223,7 +217,7 @@ const RightTitle = chakra(Text, {
 const RightValue = chakra(Text, {
   baseStyle: {
     fontSize: {
-      base: "32px",
+      base: "28px",
       xl: "52px",
     },
     fontWeight: 500,
@@ -314,7 +308,6 @@ export {
   LeftContent,
   ContentStyle,
   TrustByMillionsWrapper,
-  ContentWrapper,
   ConnectTitle,
   ConnectWrapper,
   Description,

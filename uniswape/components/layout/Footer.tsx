@@ -14,6 +14,7 @@ import Image from "next/image";
 import { Text } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
 import NextLink from "next/link";
+import { DiscordIcon, GithubIcon, TwitterIcon } from "../assets/icons";
 const Footer = () => {
   return (
     <>
@@ -24,27 +25,9 @@ const Footer = () => {
               <Text>@ 2024</Text>
               <Text>Uniswap Labs</Text>
               <CustomLogo>
-                <Image
-                  src="/images/github.png"
-                  alt="logo"
-                  width={40}
-                  height={40}
-                  quality={100}
-                />
-                <Image
-                  src="/images/twitter.png"
-                  alt="logo"
-                  width={40}
-                  height={40}
-                  quality={100}
-                />
-                <Image
-                  src="/images/discord.png"
-                  alt="logo"
-                  width={40}
-                  height={40}
-                  quality={100}
-                />
+                <GithubIcon />
+                <TwitterIcon />
+                <DiscordIcon />
               </CustomLogo>
             </LeftColumn>
           </LeftContent>

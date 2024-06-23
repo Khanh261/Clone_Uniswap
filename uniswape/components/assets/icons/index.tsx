@@ -14,7 +14,13 @@ import ArrowDownIcon from "./arrow-down.svg";
 import UniswapGlobalIcon from "./uniswap-global.svg";
 import SearchIcon from "./search.svg";
 import GooglePlayIcon from "./googleplay.svg";
+import DiscordIcon from "./discord.svg";
+import TwitterIcon from "./twitter.svg";
+import GithubIcon from "./github.svg";
 export {
+  GithubIcon,
+  TwitterIcon,
+  DiscordIcon,
   GooglePlayIcon,
   UniswapGlobalIcon,
   ArrowDownIcon,

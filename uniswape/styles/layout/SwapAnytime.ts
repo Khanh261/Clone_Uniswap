@@ -7,7 +7,7 @@ const Wrapper = chakra(Box, {
     height: "1356px",
     maxHeight: "1356px",
     background: "#161615",
-    width: "100vw",
+    width: "100%",
     position: "relative",
   },
 });
@@ -21,8 +21,8 @@ const WrapperSwap = chakra(Box, {
     inset: "auto",
     justifyContent: "flex-start",
     alignItems: "center",
-    width: "480px",
-    maxWidth: "85vw",
+    width: "100%",
+    maxWidth: "480px",
     zIndex: Z_INDEX.STICKY,
   },
 });

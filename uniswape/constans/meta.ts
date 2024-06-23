@@ -1,1 +1,1 @@
-export const TITLE = "Uniswap_Clone";
+export const TITLE = "Uniswap_v2";

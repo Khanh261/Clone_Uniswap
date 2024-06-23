@@ -104,7 +104,8 @@ const GoToDeFi = () => {
           usd_24h_change: data["lido-dao"].usd_24h_change,
         },
       ]);
-      console.log("hotChain", hotChain);
+
+      console.log("Hot chains:", hotChain);
     } catch (error) {
       console.error("Error fetching hot chains:", error);
     } finally {
