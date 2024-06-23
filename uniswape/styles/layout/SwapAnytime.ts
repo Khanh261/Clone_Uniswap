@@ -1,27 +1,42 @@
-import { COLORS } from "@/constans/css";
-import { Box, chakra, Flex, Text } from "@chakra-ui/react";
-
+import { COLORS, Z_INDEX } from "@/constans/css";
+import { Box, BoxProps, chakra, Flex, Text } from "@chakra-ui/react";
 const Wrapper = chakra(Box, {
   baseStyle: {
+    paddingTop: "72px",
     color: COLORS.SECONDARY,
     height: "1356px",
     maxHeight: "1356px",
     background: "#161615",
-    width: "100vw",
+    width: "100%",
+    position: "relative",
   },
 });
 
 const WrapperSwap = chakra(Box, {
   baseStyle: {
+    isolation: "isolate",
     display: "flex",
     flexDirection: "column",
     margin: "auto",
-    gap: "24px",
     inset: "auto",
     justifyContent: "flex-start",
     alignItems: "center",
-    width: "480px",
-    maxWidth: "85vw",
+    width: "100%",
+    maxWidth: "480px",
+    zIndex: Z_INDEX.STICKY,
+  },
+});
+
+const CoinWrapper = chakra(Flex, {
+  baseStyle: {
+    flexDirection: "row",
+    gap: "20px",
+    position: "absolute",
+    filter: "blur(5px)",
+    _hover: {
+      filter: "blur(0px)",
+      transition: "filter 0.3s ease 0s",
+    },
   },
 });
 
@@ -94,8 +109,21 @@ const BottomBlock = chakra(Flex, {
   },
 });
 
+const CoinGrid = chakra(Box, {
+  baseStyle: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(120px, 1fr))",
+    gap: "20px",
+    width: "100%",
+    padding: "20px",
+  },
+});
+
 const SellBuyItem = chakra(Flex, {
   baseStyle: {
+    flexDirection: "column",
+    justifyContent: "center",
+    gap: "20px",
     backgroundColor: "rgb(27, 27, 27)",
     borderRadius: "16px",
     color: COLORS.PRIMARY,
@@ -105,6 +133,14 @@ const SellBuyItem = chakra(Flex, {
     height: "120px",
     maxHeight: "120px",
     lineHeight: "20px",
+  },
+});
+
+const CoinValue = chakra(Flex, {
+  baseStyle: {
+    flexDirection: "column",
+    gap: "5px",
+    fontWeight: 535,
   },
 });
 
@@ -132,7 +168,44 @@ const ConnectWalletButton = chakra(Flex, {
   },
 });
 
+const SellBuyValue = chakra(Text, {
+  baseStyle: {
+    fontSize: "36px",
+    fontWeight: 485,
+    maxHeight: "44px",
+    color: COLORS.PRIMARY,
+  },
+});
+
+const DropBoxCoin = chakra(Flex, {
+  baseStyle: {
+    width: "fit-content",
+    height: "auto",
+    color: COLORS.SECONDARY,
+    borderRadius: "20px",
+    fontSize: "24px",
+    gap: "5px",
+    padding: "5px",
+    alignItems: "center",
+    backgroundColor: "rgb(19, 19, 19)",
+    cursor: "pointer",
+  },
+});
+
+const SellBuyWrapper = chakra(Flex, {
+  baseStyle: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    justifyContent: "space-between",
+  },
+});
+
 export {
+  SellBuyWrapper,
+  DropBoxCoin,
+  SellBuyValue,
+  CoinValue,
+  CoinWrapper,
   Wrapper,
   WrapperSwap,
   MainTitle,
@@ -141,4 +214,5 @@ export {
   ConnectWalletButton,
   ButtonArrowMiddle,
   Description,
+  CoinGrid,
 };

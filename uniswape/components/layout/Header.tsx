@@ -3,17 +3,24 @@ import {
   ConnectButton,
   CustomInputGroup,
   CustomText,
+  DropdownIcon,
   HeaderContent,
   HeaderWrapper,
   LeftContentHeader,
   MiddleContentHeader,
   RightContentHeader,
-  SearchIcon,
 } from "@/styles/layout/Header";
 import React from "react";
 import Image from "next/image";
 import DesktopNav from "./NavItem";
 import { Box, InputLeftElement, InputRightElement } from "@chakra-ui/react";
+import {
+  AppleIcon,
+  EthIcon,
+  GooglePlayIcon,
+  UniswapGlobalIcon,
+} from "../assets/icons";
+import { ArrowDownIcon, SearchIcon } from "@chakra-ui/icons";
 
 const DesktopHeader = () => {
   return (
@@ -21,22 +28,16 @@ const DesktopHeader = () => {
       <HeaderContent>
         <LeftContentHeader>
           <Box>
-            <Image
-              src="/images/uniswap_logo.png"
-              alt="logo"
-              width={48}
-              height={48}
-              quality={100}
-              style={{ marginRight: "1rem" }}
-            />
+            <UniswapGlobalIcon />
           </Box>
           <DesktopNav />
         </LeftContentHeader>
         <CustomInputGroup>
           <InputLeftElement>
-            <SearchIcon src="/images/search.png" alt="logo" />
+            <SearchIcon />
           </InputLeftElement>
           <MiddleContentHeader
+            placeholder="Search Token and NFT collections"
             placeContent={"Search Token and NFT collections"}
           />
           <InputRightElement>
@@ -51,37 +52,13 @@ const DesktopHeader = () => {
         </CustomInputGroup>
         <RightContentHeader>
           <ButtonDropdown>
-            <Image
-              src="/images/ethereum.png"
-              alt="eth"
-              width={20}
-              height={20}
-              quality={100}
-            />
-            <Image
-              src="/images/down-chevron.png"
-              alt="eth"
-              width={20}
-              height={20}
-              quality={100}
-            />
+            <EthIcon style={{ width: "20px", height: "20px" }} />
+            <ArrowDownIcon style={{ width: "20px", height: "20px" }} />
           </ButtonDropdown>
           <ButtonDropdown>
             <CustomText>Get the app</CustomText>
-            <Image
-              src="/images/apple.png"
-              alt="eth"
-              width={20}
-              height={20}
-              quality={100}
-            />
-            <Image
-              src="/images/google-play.png"
-              alt="eth"
-              width={20}
-              height={20}
-              quality={100}
-            />
+            <AppleIcon style={{ width: "20px", height: "20px" }} />
+            <GooglePlayIcon style={{ width: "20px", height: "20px" }} />
           </ButtonDropdown>{" "}
           <ConnectButton>Connect</ConnectButton>
         </RightContentHeader>

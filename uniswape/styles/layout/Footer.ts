@@ -18,6 +18,7 @@ const FooterWrapper = chakra(Flex, {
       base: "fit-content",
       xl: "194px",
     },
+    background: "#141414",
   },
 });
 
@@ -27,15 +28,11 @@ const FooterContent = chakra(Flex, {
     height: "auto",
     flexDirection: {
       base: "column",
-      lg: "row",
+      xl: "row",
     },
+    alignItems: "center",
     justifyContent: "space-between",
     gap: "32px",
-    paddingX: {
-      base: "16px",
-      xl: "0px",
-    },
-    boxSizing: "border-box",
     color: COLORS.SECONDARY,
   },
 });
@@ -54,6 +51,7 @@ const LeftColumn = chakra(VStack, {
 const LeftContent = chakra(Flex, {
   baseStyle: {
     flex: 1,
+    width: "100%",
     color: COLORS.SECONDARY,
   },
 });
@@ -90,6 +88,8 @@ const Information = chakra(Flex, {
     justifyContent: "space-between",
     alignItems: "flex-start",
     flexWrap: "wrap",
+    gap: "10px",
+
     width: { base: "100%", xl: "624px" },
   },
 });
@@ -98,12 +98,16 @@ const Column = chakra(Flex, {
   baseStyle: {
     flexDirection: "column",
     gap: "4px",
+    flex: {
+      md: "0 0 40%",
+      xl: "0 0 20%",
+    },
     "> a": {
       fontSize: "14px",
       lineHeight: "24px",
       letterSpacing: "0.32px",
       whiteSpace: "nowrap",
-      color: "#5C5C5C",
+      color: COLORS.PRIMARY,
     },
   },
 });

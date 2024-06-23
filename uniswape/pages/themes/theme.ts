@@ -20,7 +20,7 @@ const styles = {
     body: {
       fontSize: "14px",
       fontWeight: "500",
-      backgroundColor: "#171717",
+      bg: "#141414",
     },
     p: {
       fontSize: "14px",

@@ -40,6 +40,7 @@ const LeftContentHeader = chakra(Flex, {
     alignItems: "center",
     color: "#9B9B9B",
     maxH: "32px",
+    gap: "10px",
   },
 });
 
@@ -47,6 +48,7 @@ const NavItem = chakra(Box, {
   baseStyle: {
     color: "#9B9B9B",
     cursor: "pointer",
+    fontSize: "14px",
     _hover: {
       color: "#FFFFFF",
       bg: "rgb(59,64,64)",
@@ -63,8 +65,10 @@ const CustomInputGroup = chakra(InputGroup, {
   baseStyle: {
     display: {
       base: "none",
-      md: "flex",
+      lg: "flex",
     },
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 
@@ -76,9 +80,8 @@ const MiddleContentHeader = chakra(Input, {
     borderRadius: "20px",
     color: COLORS.PRIMARY,
     placeContent: "center",
-    py: "8px",
-    px: "12px",
-    p: "8px 12px ",
+    boxSizing: "border-box",
+    p: "8px 30px ",
     _focus: {
       border: "1px solid #9B9B9B",
     },
@@ -100,13 +103,6 @@ const RightContentHeader = chakra(Flex, {
   },
 });
 
-const SearchIcon = chakra(Img, {
-  baseStyle: {
-    w: "24px",
-    h: "24px",
-  },
-});
-
 const SlashIcon = chakra(Img, {
   baseStyle: {
     w: "24px",
@@ -120,7 +116,7 @@ const CustomText = chakra(Text, {
     fontSize: "16px",
     display: {
       base: "none",
-      md: "block",
+      xl: "block",
     },
   },
 });
@@ -129,6 +125,7 @@ const ButtonDropdown = chakra(Flex, {
   baseStyle: {
     boxSizing: "border-box",
     justifyContent: "space-between",
+    alignItems: "center",
     gap: "8px",
     _hover: {
       bg: "gray.800",
@@ -193,7 +190,6 @@ export {
   CustomInputGroup,
   ButtonDropdown,
   CustomText,
-  SearchIcon,
   SlashIcon,
   EthIcon,
   DropdownIcon,

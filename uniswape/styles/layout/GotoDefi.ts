@@ -9,14 +9,8 @@ const Wrapper = chakra(Box, {
     color: COLORS.SECONDARY,
     alignItems: "center",
     justifyContent: "flex-start",
-    boxSizing: "border-box",
-    padding: {
-      base: "0 48px",
-      xl: 0,
-    },
     gap: "32px",
     width: "100%",
-    inset: "auto",
   },
 });
 
@@ -83,7 +77,10 @@ const CardItem = chakra(GridItem, {
     },
     height: "auto",
     borderRadius: "20px",
-    padding: "32px",
+    padding: {
+      base: "16px",
+      xl: "32px",
+    },
     overflow: "hidden",
     display: "flex",
     flexDirection: "column",
@@ -98,7 +95,10 @@ const WrapperHotChain = chakra(Flex, {
     alignItems: "center",
     width: "100%",
     boxSizing: "border-box",
-    padding: "32px",
+    padding: {
+      base: "16px",
+      xl: "32px",
+    },
     gap: "6px",
   },
 });
@@ -127,7 +127,10 @@ const HotChainItem = chakra(Flex, {
 
 const ChainName = chakra(Text, {
   baseStyle: {
-    fontSize: "24px",
+    fontSize: {
+      base: "16px",
+      xl: "24px",
+    },
     fontStyle: "normal",
     fontWeight: 500,
     lineHeight: "32px",

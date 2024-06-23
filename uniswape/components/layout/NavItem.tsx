@@ -1,7 +1,7 @@
 import { NAV_ITEMS } from "@/constans/nav-data";
 import { NavItem } from "@/styles/layout/Header";
-import { ChevronRightIcon } from "@chakra-ui/icons";
 import { Stack } from "@chakra-ui/react";
+import Link from "next/link";
 
 interface NavItem {
   label: string;
@@ -12,9 +12,13 @@ interface NavItem {
 
 const DesktopNav = () => {
   return (
-    <Stack direction={"row"} spacing={4}>
+    <Stack direction={"row"} spacing={5}>
       {NAV_ITEMS.map((navItem) => (
-        <NavItem key={navItem.label}>{navItem.label}</NavItem>
+        <>
+          <Link href={navItem.href}>
+            <NavItem key={navItem.label}>{navItem.label}</NavItem>
+          </Link>
+        </>
       ))}
     </Stack>
   );

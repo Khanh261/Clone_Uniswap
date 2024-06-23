@@ -17,3 +17,10 @@ export interface IHotChain {
   usd: number;
   usd_24h_change: number;
 }
+
+export interface ICoin {
+  id: string;
+  symbol: string;
+  image: string;
+  price_change_percentage_24h: number;
+}
